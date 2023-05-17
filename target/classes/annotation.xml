@@ -12,5 +12,6 @@
  http://www.springframework.org/schema/aop
  http://www.springframework.org/schema/aop/spring-aop.xsd">
  <context:component-scan base-package="annotation"/>
+ <context:component-scan base-package="test0517"/>
  <aop:aspectj-autoproxy /><!-- AOP 관련 @Aspect(어노테이션) 사용가능하게 해줌 -->
  </beans>
