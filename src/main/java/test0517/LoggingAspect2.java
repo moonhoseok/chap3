@@ -7,14 +7,14 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
+//test0517.Project 클래스의 모든 public 메서드만 가능하도록 수정
 @Component	// 객체화
 @Aspect		// AOP 클래스.
 @Order(3)	// 순서지정
 public class LoggingAspect2 {
 	// "execution(public * annotation..*(..))" : 어노테이션에 속한 클래스의 퍼블릭 메서드들을 포인트컷으로 설정
 	// pointcut 설정 : annotation 패키지에 속한 클래스의 모든 public 메서드
-	final String publicMethod = "execution(public * test0517..*(..))";
+	final String publicMethod = "execution(public * test0517.Project..*(..))";
 	@Before(publicMethod) 
 	public void before() {
 		System.out.println("[LA] Before 메서드 실행 전 실행 : Before");
